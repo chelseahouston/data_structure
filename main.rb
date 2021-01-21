@@ -1,8 +1,8 @@
-# Paul Barry > Programming, Networking, Security, Open Source, Frameworks
-# Chris Meudec > Testing, Safety Systems, Formal Systems, Programming Languages
-# Nigel Whyte > Graphics, Imaging, Programming, Sign Language, Trees
-# Austin Kinsella > Networks, WANs, Programming, Macintosh, Digital Photography
-# Gerry Moloney > Placement, Employment, Emerging Systems, Web Development
+# Paul Barry, Programming, Networking, Security, Open Source, Frameworks
+# Chris Meudec, Testing, Safety Systems, Formal Systems, Programming Languages
+# Nigel Whyte, Graphics, Imaging, Programming, Sign Language, Trees
+# Austin Kinsella, Networks, WANs, Programming, Macintosh, Digital Photography
+# Gerry Moloney, Placement, Employment, Emerging Systems, Web Development
 
 require 'csv'
 
@@ -12,7 +12,7 @@ CSV.foreach("rubytta.csv") do |row|
 end
 
 # 1. Display the 2nd and 4th area of interest for each lecturer ---
-puts "1. 2nd and 4th Area of Interest for each Lecturer:"
+puts "1. Displaying the 2nd and 4th Area of Interest for each Lecturer:"
 # 01 Paul Barry
 puts "Name: #{table[1][0]}"
 puts "Area of interest 02: #{table[1][2]}"
@@ -37,6 +37,7 @@ puts "\n"
 puts "Name: #{table[5][0]}"
 puts "Area of interest 02: #{table[5][2]}"
 puts "Area of interest 04: #{table[5][4]}"
+puts "\n"
 puts "\n"
 
 # 2. Show each lecturers final area of interest ---
@@ -69,42 +70,45 @@ puts "\n"
 puts "Name: #{table[5][0]}"
 puts "Final Area of Interest: #{table[5][-1]}"
 puts "\n"
+puts "\n"
 
 # 3. Display each lecturer name with the number of areas of interest they have ---
-puts "The number of Area of Interests each lecturer has is:"
+puts "3. The number of Areas of Interest each lecturer has are:"
 # 01 Paul Barry
 puts "Name: #{table[1][0]}" 
 count01 = table[1].count
 count01 -= 1
-puts "Number of Area of Interest:s #{count01}"
+puts "Number of Areas of Interest: #{count01}"
 puts "\n"
 # 02 Chris Meudec
 puts "Name: #{table[2][0]}" 
 count02 = table[2].count
 count02 -= 1
-puts "Number of Area of Interest:s #{count02}"
+puts "Number of Areas of Interest: #{count02}"
 puts "\n"
 # 03 Nigel Whyte
 puts "Name: #{table[3][0]}"
 count03 = table[3].count
 count03 -= 1
-puts "Number of Area of Interest:s #{count03}"
+puts "Number of Areas of Interest: #{count03}"
 puts "\n"
 # 04 Austin Kinsella
 puts "Name: #{table[4][0]}"
 count04 = table[4].count
 count04 -= 1
-puts "Number of Area of Interest:s #{count04}"
+puts "Number of Areas of Interest: #{count04}"
 puts "\n"
 # 05 Gerry Moloney
 puts "Name: #{table[5][0]}"
 count05 = table[5].count
 count05 -= 1
-puts "Number of Area of Interests: #{count05}"
+puts "Number of Areas of Interest: #{count05}"
+puts "\n"
 puts "\n"
 
 # 4. Replace "Programming" in area of interest with "Software Engineering", changing the code within the data structure. Print the entire list after the change
-
+puts "4. Replacing the AOI 'Programming' with 'Software Engineering'."
+puts "\n"
 substitutions = { "Programming" => "Software Engineering" }
 table[1].each_with_index do |str,ind|
   substitutions.each_key do |word|
