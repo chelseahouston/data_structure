@@ -100,5 +100,39 @@ puts "\n"
 puts "Name: #{table[5][0]}"
 count05 = table[5].count
 count05 -= 1
-puts "Number of Area of Interest:s #{count05}"
+puts "Number of Area of Interests: #{count05}"
 puts "\n"
+
+# 4. Replace "Programming" in area of interest with "Software Engineering", changing the code within the data structure. Print the entire list after the change
+
+substitutions = { "Programming" => "Software Engineering" }
+table[1].each_with_index do |str,ind|
+  substitutions.each_key do |word|
+    table[1][ind].gsub!(word,substitutions[word]) if str == (word)
+  end
+end
+table[2].each_with_index do |str,ind|
+  substitutions.each_key do |word|
+    table[2][ind].gsub!(word,substitutions[word]) if str == (word)
+  end
+end
+table[3].each_with_index do |str,ind|
+  substitutions.each_key do |word|
+    table[3][ind].gsub!(word,substitutions[word]) if str == (word)
+  end
+end
+table[4].each_with_index do |str,ind|
+  substitutions.each_key do |word|
+    table[4][ind].gsub!(word,substitutions[word]) if str == (word)
+  end
+end
+table[5].each_with_index do |str,ind|
+  substitutions.each_key do |word|
+    table[5][ind].gsub!(word,substitutions[word]) if str == (word)
+  end
+end
+puts table[1].join(", ")
+puts table[2].join(", ")
+puts table[3].join(", ")
+puts table[4].join(", ")
+puts table[5].join(", ")
