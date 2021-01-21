@@ -79,3 +79,12 @@ puts "Final Area of Interest: #{final05}"
 puts "\n"
 
 # 3. Display each lecturer name with the number of areas of interest they have ---
+puts "The number of AOIs each lecturer has is:"
+# Paul Barry
+puts "Name: #{table[1][0]}" 
+puts table[1].count
+puts "\n"
+# Chris Meudec
+puts "Name: #{table[2][0]}"
+puts table[2].count
+puts "\n"
